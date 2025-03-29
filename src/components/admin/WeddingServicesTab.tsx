@@ -32,7 +32,9 @@ const WeddingServicesTab = () => {
     name: '',
     subcategory: 'stage',
     price: 0,
-    active: true
+    active: true,
+    image: null as File | null,
+    video: null as File | null
   });
   
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -40,20 +42,33 @@ const WeddingServicesTab = () => {
     setNewService(prev => ({ ...prev, [name]: name === 'price' ? Number(value) : value }));
   };
   
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      const { name } = e.target;
+      setNewService(prev => ({ ...prev, [name]: e.target.files![0] }));
+    }
+  };
+  
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!newService.name || newService.price <= 0) {
+    if (!newService.name || newService.price <= 0 || !newService.image) {
       toast({
         title: "Invalid input",
-        description: "Please fill in all fields with valid values",
+        description: "Please fill in all required fields with valid values",
         variant: "destructive"
       });
       return;
     }
     
     const newId = Math.max(...services.map(s => s.id)) + 1;
-    setServices([...services, { ...newService, id: newId }]);
+    setServices([...services, { 
+      id: newId, 
+      name: newService.name,
+      subcategory: newService.subcategory,
+      price: newService.price,
+      active: newService.active
+    }]);
     
     toast({
       title: "Service added",
@@ -65,7 +80,9 @@ const WeddingServicesTab = () => {
       name: '',
       subcategory: 'stage',
       price: 0,
-      active: true
+      active: true,
+      image: null,
+      video: null
     });
   };
   
@@ -90,7 +107,7 @@ const WeddingServicesTab = () => {
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <label className="text-sm font-medium">Service Name</label>
+              <label className="text-sm font-medium">Service Name*</label>
               <Input
                 name="name"
                 value={newService.name}
@@ -101,7 +118,7 @@ const WeddingServicesTab = () => {
             </div>
             
             <div className="space-y-2">
-              <label className="text-sm font-medium">Subcategory</label>
+              <label className="text-sm font-medium">Subcategory*</label>
               <select
                 name="subcategory"
                 value={newService.subcategory}
@@ -119,7 +136,7 @@ const WeddingServicesTab = () => {
             </div>
             
             <div className="space-y-2">
-              <label className="text-sm font-medium">Price (₹)</label>
+              <label className="text-sm font-medium">Price (₹)*</label>
               <Input
                 type="number"
                 name="price"
@@ -144,6 +161,42 @@ const WeddingServicesTab = () => {
                 Active
               </label>
             </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <label className="text-sm font-medium">Main Image*</label>
+              <Input
+                type="file"
+                name="image"
+                onChange={handleFileChange}
+                accept="image/*"
+                required
+              />
+              <p className="text-xs text-gray-500">This will be the main image of the service</p>
+            </div>
+            
+            <div className="space-y-2">
+              <label className="text-sm font-medium">Video (optional)</label>
+              <Input
+                type="file"
+                name="video"
+                onChange={handleFileChange}
+                accept="video/*"
+              />
+              <p className="text-xs text-gray-500">Upload a short video preview</p>
+            </div>
+          </div>
+          
+          <div className="space-y-2">
+            <label className="text-sm font-medium">Description</label>
+            <textarea
+              name="description"
+              onChange={(e) => setNewService(prev => ({ ...prev, description: e.target.value }))}
+              placeholder="Enter service description"
+              className="w-full px-3 py-2 border rounded-md"
+              rows={3}
+            />
           </div>
           
           <Button type="submit">Add Service</Button>

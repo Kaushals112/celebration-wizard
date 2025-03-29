@@ -19,6 +19,7 @@ import AdminDashboard from "@/pages/AdminDashboard";
 import NotFound from "@/pages/NotFound";
 import WeddingServicesPage from "@/pages/WeddingServicesPage";
 import WeddingServiceCategoryPage from "@/pages/WeddingServiceCategoryPage";
+import WeddingServiceDetailsPage from "@/pages/WeddingServiceDetailsPage";
 
 // Layout Components
 import Navbar from "@/components/Navbar";
@@ -49,9 +50,10 @@ const App = () => {
                     <Route path="/contact" element={<ContactPage />} />
                     <Route path="/admin" element={<AdminDashboard />} />
                     
-                    {/* New wedding services routes */}
+                    {/* Wedding service routes */}
                     <Route path="/wedding" element={<WeddingServicesPage />} />
                     <Route path="/wedding/:serviceType" element={<WeddingServiceCategoryPage />} />
+                    <Route path="/wedding/:serviceType/:id" element={<WeddingServiceDetailsPage />} />
                     
                     <Route path="*" element={<NotFound />} />
                   </Routes>
