@@ -15,6 +15,7 @@ import { useToast } from '@/components/ui/use-toast';
 import { useAuth } from '@/contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import BackButton from '@/components/BackButton';
+import WeddingServicesTab from '@/components/admin/WeddingServicesTab';
 
 // Sample data
 const bookings = [
@@ -133,6 +134,7 @@ const AdminDashboard = () => {
       <Tabs defaultValue="bookings">
         <TabsList className="mb-8">
           <TabsTrigger value="bookings">Bookings</TabsTrigger>
+          <TabsTrigger value="wedding-services">Wedding Services</TabsTrigger>
           <TabsTrigger value="upload">Upload Media</TabsTrigger>
           <TabsTrigger value="settings">Settings</TabsTrigger>
         </TabsList>
@@ -196,6 +198,10 @@ const AdminDashboard = () => {
               </Table>
             </div>
           </div>
+        </TabsContent>
+        
+        <TabsContent value="wedding-services">
+          <WeddingServicesTab />
         </TabsContent>
         
         <TabsContent value="upload">
