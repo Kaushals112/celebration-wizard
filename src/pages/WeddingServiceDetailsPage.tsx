@@ -56,6 +56,28 @@ const weddingServiceItems = {
     video: 'https://assets.mixkit.co/videos/preview/mixkit-elegant-wedding-cake-on-a-bright-setting-39659-large.mp4',
     serviceType: 'stage'
   },
+  'stage-minimalist': {
+    id: 'stage-minimalist',
+    name: 'Minimalist Stage Design',
+    description: 'Clean and elegant stage setup with minimalist design elements and subtle lighting.',
+    price: 65000,
+    features: [
+      'Clean, modern design',
+      'Subtle color palette',
+      'Minimalist floral accents',
+      'Elegant ambient lighting',
+      'Contemporary couple seating',
+      'Professional setup and dismantling',
+    ],
+    mainImage: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80',
+    images: [
+      'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80',
+      'https://images.unsplash.com/photo-1519741347686-c1e331ec5a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80',
+      'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80',
+    ],
+    video: 'https://assets.mixkit.co/videos/preview/mixkit-elegant-wedding-cake-on-a-bright-setting-39659-large.mp4',
+    serviceType: 'stage'
+  },
   'mandap-traditional': {
     id: 'mandap-traditional',
     name: 'Traditional Mandap Setup',
@@ -78,6 +100,28 @@ const weddingServiceItems = {
     video: 'https://assets.mixkit.co/videos/preview/mixkit-palace-decorations-for-a-wedding-ceremony-23554-large.mp4',
     serviceType: 'mandap'
   },
+  'mandap-contemporary': {
+    id: 'mandap-contemporary',
+    name: 'Contemporary Mandap Design',
+    description: 'Modern mandap setup with contemporary design elements while maintaining traditional essence.',
+    price: 85000,
+    features: [
+      'Modern mandap structure',
+      'Contemporary floral designs',
+      'Elegant fabric draping',
+      'Modern lighting setup',
+      'Color themes of your choice',
+      'Professional setup and dismantling',
+    ],
+    mainImage: 'https://images.unsplash.com/photo-1620162009840-7a61c6274bf1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1771&q=80',
+    images: [
+      'https://images.unsplash.com/photo-1620162009840-7a61c6274bf1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1771&q=80',
+      'https://images.unsplash.com/photo-1519741347686-c1e331ec5a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80',
+      'https://images.unsplash.com/photo-1620162009840-7a61c6274bf1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1771&q=80',
+    ],
+    video: 'https://assets.mixkit.co/videos/preview/mixkit-palace-decorations-for-a-wedding-ceremony-23554-large.mp4',
+    serviceType: 'mandap'
+  },
   'gate-royal': {
     id: 'gate-royal',
     name: 'Royal Gate Decoration',
@@ -90,6 +134,28 @@ const weddingServiceItems = {
       'Decorative lighting',
       'Customized welcome signage',
       'Setup and dismantling included'
+    ],
+    mainImage: 'https://images.unsplash.com/photo-1519741347686-c1e331ec5a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80',
+    images: [
+      'https://images.unsplash.com/photo-1519741347686-c1e331ec5a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80',
+      'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80',
+      'https://images.unsplash.com/photo-1519741347686-c1e331ec5a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80',
+    ],
+    video: 'https://assets.mixkit.co/videos/preview/mixkit-palace-decorations-for-a-wedding-ceremony-23554-large.mp4',
+    serviceType: 'gate'
+  },
+  'gate-floral': {
+    id: 'gate-floral',
+    name: 'Floral Arch Entrance',
+    description: 'Beautiful arch entrance decorated with fresh flowers and subtle lighting.',
+    price: 28000,
+    features: [
+      'Elegant arch structure',
+      'Fresh seasonal flowers',
+      'Subtle lighting effects',
+      'Customizable design',
+      'Professional setup',
+      'Quality guaranteed'
     ],
     mainImage: 'https://images.unsplash.com/photo-1519741347686-c1e331ec5a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80',
     images: [

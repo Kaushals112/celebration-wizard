@@ -34,10 +34,12 @@ const WeddingServicesTab = () => {
     price: 0,
     active: true,
     image: null as File | null,
-    video: null as File | null
+    video: null as File | null,
+    description: '',
+    features: ''
   });
   
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setNewService(prev => ({ ...prev, [name]: name === 'price' ? Number(value) : value }));
   };
@@ -82,7 +84,9 @@ const WeddingServicesTab = () => {
       price: 0,
       active: true,
       image: null,
-      video: null
+      video: null,
+      description: '',
+      features: ''
     });
   };
   
@@ -189,14 +193,30 @@ const WeddingServicesTab = () => {
           </div>
           
           <div className="space-y-2">
-            <label className="text-sm font-medium">Description</label>
+            <label className="text-sm font-medium">Description*</label>
             <textarea
               name="description"
-              onChange={(e) => setNewService(prev => ({ ...prev, description: e.target.value }))}
+              value={newService.description}
+              onChange={handleInputChange}
               placeholder="Enter service description"
               className="w-full px-3 py-2 border rounded-md"
               rows={3}
+              required
             />
+          </div>
+          
+          <div className="space-y-2">
+            <label className="text-sm font-medium">Features (one per line)*</label>
+            <textarea
+              name="features"
+              value={newService.features}
+              onChange={handleInputChange}
+              placeholder="Enter service features (one feature per line)"
+              className="w-full px-3 py-2 border rounded-md"
+              rows={4}
+              required
+            />
+            <p className="text-xs text-gray-500">Enter each feature on a new line</p>
           </div>
           
           <Button type="submit">Add Service</Button>
