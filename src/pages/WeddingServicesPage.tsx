@@ -12,42 +12,42 @@ const weddingServices = [
     name: 'Stage Decoration',
     description: 'Beautiful stage setups for wedding ceremonies and receptions',
     image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80',
-    path: '/wedding/stage'
+    path: '/wedding-decoration/stage'
   },
   {
     id: 'mandap',
     name: 'Mandap Decoration',
     description: 'Traditional mandap setups with beautiful decorations',
     image: 'https://images.unsplash.com/photo-1620162009840-7a61c6274bf1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1771&q=80',
-    path: '/wedding/mandap'
+    path: '/wedding-decoration/mandap'
   },
   {
     id: 'gate',
     name: 'Gate Decoration',
     description: 'Grand entrance gates decorated with flowers and fabric',
     image: 'https://images.unsplash.com/photo-1519741347686-c1e331ec5a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80',
-    path: '/wedding/gate'
+    path: '/wedding-decoration/gate'
   },
   {
     id: 'gallery',
     name: 'Gallery Decoration',
     description: 'Beautifully decorated pathways with flowers and photo frames',
     image: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1776&q=80',
-    path: '/wedding/gallery'
+    path: '/wedding-decoration/gallery'
   },
   {
     id: 'reception',
     name: 'Reception Decoration',
     description: 'Elegant decoration for wedding receptions',
     image: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-    path: '/wedding/reception'
+    path: '/wedding-decoration/reception'
   },
   {
     id: 'complete',
     name: 'Complete Wedding Packages',
     description: 'Comprehensive wedding decoration packages',
     image: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-    path: '/wedding/complete'
+    path: '/wedding-decoration/complete'
   }
 ];
 

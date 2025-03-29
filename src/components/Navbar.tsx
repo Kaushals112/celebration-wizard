@@ -34,7 +34,40 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
             <Link to="/" className="text-gray-700 hover:text-primary font-medium">Home</Link>
-            <Link to="/events/wedding" className="text-gray-700 hover:text-primary font-medium">Weddings</Link>
+            
+            {/* Wedding Services Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className="text-gray-700 hover:text-primary font-medium bg-transparent">
+                  Wedding Services
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-56">
+                <DropdownMenuItem onClick={() => navigate('/wedding')}>
+                  All Wedding Services
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem onClick={() => navigate('/wedding-decoration/stage')}>
+                  Stage Decoration
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => navigate('/wedding-decoration/mandap')}>
+                  Mandap Decoration
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => navigate('/wedding-decoration/gate')}>
+                  Gate Decoration
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => navigate('/wedding-decoration/gallery')}>
+                  Gallery Decoration
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => navigate('/wedding-decoration/reception')}>
+                  Reception Decoration
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => navigate('/wedding-decoration/complete')}>
+                  Complete Packages
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+            
             <Link to="/events/birthday" className="text-gray-700 hover:text-primary font-medium">Birthday</Link>
             <Link to="/events/corporate" className="text-gray-700 hover:text-primary font-medium">Corporate</Link>
             <Link to="/contact" className="text-gray-700 hover:text-primary font-medium">Contact</Link>
@@ -127,7 +160,19 @@ const Navbar = () => {
           <div className="md:hidden pt-4 pb-3 border-t mt-4 animate-fade-in">
             <nav className="flex flex-col space-y-3">
               <Link to="/" className="text-gray-700 py-2 px-3 rounded-md hover:bg-accent">Home</Link>
-              <Link to="/events/wedding" className="text-gray-700 py-2 px-3 rounded-md hover:bg-accent">Weddings</Link>
+              
+              {/* Wedding Services Section */}
+              <div className="border-t border-b py-2">
+                <div className="px-3 py-1 text-sm font-medium text-gray-500">Wedding Services</div>
+                <Link to="/wedding" className="text-gray-700 py-1 px-6 block hover:bg-accent">All Wedding Services</Link>
+                <Link to="/wedding-decoration/stage" className="text-gray-700 py-1 px-6 block hover:bg-accent">Stage Decoration</Link>
+                <Link to="/wedding-decoration/mandap" className="text-gray-700 py-1 px-6 block hover:bg-accent">Mandap Decoration</Link>
+                <Link to="/wedding-decoration/gate" className="text-gray-700 py-1 px-6 block hover:bg-accent">Gate Decoration</Link>
+                <Link to="/wedding-decoration/gallery" className="text-gray-700 py-1 px-6 block hover:bg-accent">Gallery Decoration</Link>
+                <Link to="/wedding-decoration/reception" className="text-gray-700 py-1 px-6 block hover:bg-accent">Reception Decoration</Link>
+                <Link to="/wedding-decoration/complete" className="text-gray-700 py-1 px-6 block hover:bg-accent">Complete Packages</Link>
+              </div>
+              
               <Link to="/events/birthday" className="text-gray-700 py-2 px-3 rounded-md hover:bg-accent">Birthday</Link>
               <Link to="/events/corporate" className="text-gray-700 py-2 px-3 rounded-md hover:bg-accent">Corporate</Link>
               <Link to="/contact" className="text-gray-700 py-2 px-3 rounded-md hover:bg-accent">Contact</Link>

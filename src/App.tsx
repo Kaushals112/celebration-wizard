@@ -21,6 +21,14 @@ import WeddingServicesPage from "@/pages/WeddingServicesPage";
 import WeddingServiceCategoryPage from "@/pages/WeddingServiceCategoryPage";
 import WeddingServiceDetailsPage from "@/pages/WeddingServiceDetailsPage";
 
+// Specific Wedding Service Pages
+import StageDecorationPage from "@/pages/wedding/StageDecorationPage";
+import MandapDecorationPage from "@/pages/wedding/MandapDecorationPage";
+import GateDecorationPage from "@/pages/wedding/GateDecorationPage";
+import GalleryDecorationPage from "@/pages/wedding/GalleryDecorationPage";
+import ReceptionDecorationPage from "@/pages/wedding/ReceptionDecorationPage";
+import CompleteWeddingPackagePage from "@/pages/wedding/CompleteWeddingPackagePage";
+
 // Layout Components
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -54,6 +62,14 @@ const App = () => {
                     <Route path="/wedding" element={<WeddingServicesPage />} />
                     <Route path="/wedding/:serviceType" element={<WeddingServiceCategoryPage />} />
                     <Route path="/wedding/:serviceType/:id" element={<WeddingServiceDetailsPage />} />
+                    
+                    {/* Specific Wedding Service Pages */}
+                    <Route path="/wedding-decoration/stage" element={<StageDecorationPage />} />
+                    <Route path="/wedding-decoration/mandap" element={<MandapDecorationPage />} />
+                    <Route path="/wedding-decoration/gate" element={<GateDecorationPage />} />
+                    <Route path="/wedding-decoration/gallery" element={<GalleryDecorationPage />} />
+                    <Route path="/wedding-decoration/reception" element={<ReceptionDecorationPage />} />
+                    <Route path="/wedding-decoration/complete" element={<CompleteWeddingPackagePage />} />
                     
                     <Route path="*" element={<NotFound />} />
                   </Routes>
